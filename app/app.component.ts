@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   `],
   template: `
     <div class="jumbotron text-center">
-      <h1>The App Lives!</h1>
+      <h1>Gerry's HTTP Practice</h1>
       <p>{{ message }}</p>
     </div>
   `
