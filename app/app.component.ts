@@ -9,7 +9,7 @@ import { User } from './shared/models/user';
   `],
   template: `
     <div class="jumbotron text-center">
-      <h1>Gerry's HTTP Practice</h1>
+      <h1>Http</h1>
     </div>
 		<div *ngIf="users">
 			<div *ngFor="let user of users">
