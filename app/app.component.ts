@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { User } from './shared/models/user';
 import { UserService } from './shared/services/user.service';
+import { UsersComponent } from './users/users.component';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 @Component({
@@ -19,6 +20,7 @@ import 'rxjs/add/operator/toPromise';
 				<h2>{{ user.first_name }}</h2>
 			</div>
 		</div>
+		<my-users></my-users>
 	`
 })
 export class AppComponent implements OnInit{
@@ -35,7 +37,6 @@ export class AppComponent implements OnInit{
 			console.log(users);
 			this.users = users;
 		});
-		console.log(this.users);
 /*
 		this.http.get('https://reqres.in/api/users')
 		.toPromise()
