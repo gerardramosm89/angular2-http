@@ -9,7 +9,6 @@ import { UsersComponent } from './users/users.component';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
-
 @NgModule({
   imports: [ 
 		BrowserModule,
