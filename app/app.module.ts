@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './shared/services/user.service';
 import { UsersComponent } from './users/users.component';
+import { routing } from './app.routing';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
@@ -13,7 +14,8 @@ import 'rxjs/add/operator/catch';
   imports: [ 
 		BrowserModule,
 		HttpModule,
-		FormsModule
+		FormsModule,
+		routing
 	],
   declarations: [ 
 		AppComponent,

@@ -20,7 +20,7 @@ import 'rxjs/add/operator/toPromise';
 				<h2>{{ user.first_name }}</h2>
 			</div>
 		</div>
-		<my-users></my-users>
+		<router-outlet></router-outlet>
 	`
 })
 export class AppComponent implements OnInit{
