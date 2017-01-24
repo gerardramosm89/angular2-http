@@ -15,7 +15,10 @@ export class UserService {
 			.catch(this.handleError);
 	}
 	//get a single user
-
+	getUser(id): Observable<any> {
+   return this.http.get(`${this.usersUrl}/${id}`)
+      .map(res => res.json().data)
+      .catch(this.handleError);
 	//create a user
 
 	//update a user

@@ -3,7 +3,6 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { User } from './shared/models/user';
 import { UserService } from './shared/services/user.service';
-import { UsersComponent } from './users/users.component';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 @Component({
