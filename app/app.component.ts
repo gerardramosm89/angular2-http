@@ -12,15 +12,19 @@ import 'rxjs/add/operator/toPromise';
     
   `],
   template: `
-    <div class="jumbotron text-center">
-      <h1>Http</h1>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a routerLink="/" class="navbar-brand">Gerry's HTTP</a>
+          </div>
+          <ul class="nav navbar-nav"> 
+            <li><a routerLink="/users">Users</a></li>
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
     </div>
-		<div *ngIf="users">
-			<div *ngFor="let user of users">
-				<h2>{{ user.first_name }}</h2>
-			</div>
-		</div>
-		<router-outlet></router-outlet>
 	`
 })
 export class AppComponent implements OnInit{
