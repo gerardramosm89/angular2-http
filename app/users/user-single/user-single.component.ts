@@ -4,8 +4,13 @@ import { User } from '../../shared/models/user';
 import { UserService } from '../../shared/services/user.service';
 
 @Component({
-	templateUrl: './app/users/user-single/user-single.component.html'
-//	template: ``
+	templateUrl: './app/users/user-single/user-single.component.html',
+	styles:[`
+		.user-card {
+		cursor: pointer !important;
+		}
+	`]
+	//	template: ``
 })
 
 export class UserSingleComponent implements OnInit {

@@ -3,7 +3,12 @@ import { UserService } from '../../shared/services/user.service';
 import { User } from '../../shared/models/user';
 
 @Component({
-	templateUrl: './app/users/user-list/user-list.component.html'
+	templateUrl: './app/users/user-list/user-list.component.html',
+  styles:[`
+    .user-card {
+    cursor: pointer !important;
+    }
+	`]
 })
 
 export class UserListComponent implements OnInit {
