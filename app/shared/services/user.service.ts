@@ -12,6 +12,7 @@ export class UserService {
 	getUsers(): Observable<any> {
 	 return this.http.get(`${this.usersUrl}`)
 		  .map(res => res.json().data)
+			.map(users => users.map(this.toUser))
 			.catch(this.handleError);
 	}
 	//get a single user
@@ -19,6 +20,7 @@ export class UserService {
    return this.http.get(`${this.usersUrl}/${id}`)
       .map(res => res.json().data)
       .catch(this.handleError);
+	}
 	//create a user
 
 	//update a user
@@ -27,6 +29,15 @@ export class UserService {
 /*
  * Handle Any Errors from API
  */
+  private toUser(user) {
+    return {
+      id: user.id,
+      name: `${user.first_name} ${user.last_name}`,
+      username: user.first_name,
+      avatar: user.avatar
+    };
+  }
+	
   private handleError(err) {
     let errMessage: string;
 
@@ -39,5 +50,5 @@ export class UserService {
     }
 
     return Observable.throw(errMessage);
-  }
+  }	
 }
